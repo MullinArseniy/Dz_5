@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dz_Tumakov", "Dz_Tumakov\Dz_Tumakov.csproj", "{4366F139-666E-44ED-8A38-57800D370AEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dz_Latypova", "Dz_Latypova\Dz_Latypova.csproj", "{2C5637F6-F2F0-4C41-8FC8-577C01694EF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4366F139-666E-44ED-8A38-57800D370AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4366F139-666E-44ED-8A38-57800D370AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4366F139-666E-44ED-8A38-57800D370AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4366F139-666E-44ED-8A38-57800D370AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C5637F6-F2F0-4C41-8FC8-577C01694EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C5637F6-F2F0-4C41-8FC8-577C01694EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C5637F6-F2F0-4C41-8FC8-577C01694EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C5637F6-F2F0-4C41-8FC8-577C01694EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {141E3A37-D918-4942-A186-F38D6E43FF65}
+	EndGlobalSection
+EndGlobal
