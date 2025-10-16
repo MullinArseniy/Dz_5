@@ -47,34 +47,41 @@ namespace Dz_Tumakov_Methods
 
         public static void Exercise_1(string[] args)
         {
-            string filename = "";
-            if (args.Length == 0)
+            try
             {
-                Console.WriteLine("Введите имя файла:");
-                filename = Console.ReadLine();
-            }
-            else
-            {
-                filename = args[0];
-            }
 
-            if (!File.Exists(filename))
-            {
-                Console.WriteLine("Файл не найден: " + filename);
-                Console.WriteLine("Нажмите Enter для выхода...");
+
+                string filename = "";
+                if (args.Length == 0)
+                {
+                    Console.WriteLine("Введите имя файла:");
+                    filename = Console.ReadLine();
+                }
+                else
+                {
+                    filename = args[0];
+                }
+
+                if (!File.Exists(filename))
+                {
+                    Console.WriteLine("Файл не найден: " + filename);
+                    Console.WriteLine("Нажмите Enter для выхода...");
+                    Console.ReadLine();
+                    return;
+                }
+
+                // Вариант 1: читать в массив символов
+                char[] chars = File.ReadAllText(filename).ToCharArray();
+                CountVowelsAndConsonants(chars);
+
+                // Вариант 2: читать в List<char>
+                List<char> charList = new List<char>(chars);
+                CountVowelsAndConsonants(charList);
+
                 Console.ReadLine();
-                return;
             }
-
-            // Вариант 1: читать в массив символов
-            char[] chars = File.ReadAllText(filename).ToCharArray();
-            CountVowelsAndConsonants(chars);
-
-            // Вариант 2: читать в List<char>
-            List<char> charList = new List<char>(chars);
-            CountVowelsAndConsonants(charList);
-
-            Console.ReadLine();
+            catch (Exception ex)
+            { Console.WriteLine($"Ошибка : {ex.Message}"); }
         }
 
 
@@ -250,6 +257,8 @@ namespace Dz_Tumakov_Methods
         }
 
         //3
+        
+        
 
         public static void Exercise_3()
         {

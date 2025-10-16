@@ -20,35 +20,40 @@ namespace Dz_Latypova_Methods
         /// </summary>
         public static void Excercise_1()
         {
-            string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images"); // Папка с jpeg в проекте
-            var imageFiles = Directory.GetFiles(folderPath, "*.jpeg").ToList();
-
-            List<string> images = new List<string>();
-
-            // Добавляем каждое имя файла дважды
-            foreach (var file in imageFiles)
+            try
             {
-                images.Add(Path.GetFileName(file));
-                images.Add(Path.GetFileName(file));
-            }
+                string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images"); // Папка с jpeg в проекте
+                var imageFiles = Directory.GetFiles(folderPath, "*.jpeg").ToList();
 
-            // Вывод исходного списка
-            Console.WriteLine("Изначальный список:");
-            for (int i = 0; i < images.Count; i++)
-            {
-                Console.WriteLine($"{i + 1}: {images[i]}");
-            }
+                List<string> images = new List<string>();
 
-            // Перемешиваем список случайным образом
-            Random rand = new Random();
-            var shuffled = images.OrderBy(x => rand.Next()).ToList();
+                // Добавляем каждое имя файла дважды
+                foreach (var file in imageFiles)
+                {
+                    images.Add(Path.GetFileName(file));
+                    images.Add(Path.GetFileName(file));
+                }
 
-            // Вывод перемешанного списка
-            Console.WriteLine("\nПеремешанный список:");
-            for (int i = 0; i < shuffled.Count; i++)
-            {
-                Console.WriteLine($"{i + 1}: {shuffled[i]}");
+                // Вывод исходного списка
+                Console.WriteLine("Изначальный список:");
+                for (int i = 0; i < images.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}: {images[i]}");
+                }
+
+                // Перемешиваем список случайным образом
+                Random rand = new Random();
+                var shuffled = images.OrderBy(x => rand.Next()).ToList();
+
+                // Вывод перемешанного списка
+                Console.WriteLine("\nПеремешанный список:");
+                for (int i = 0; i < shuffled.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}: {shuffled[i]}");
+                }
             }
+            catch (Exception ex)
+            { Console.WriteLine($"Ошибка при работе с файлами : {ex.Message}"); }
         }
 
 
